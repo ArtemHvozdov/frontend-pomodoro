@@ -1,0 +1,16 @@
+.main__tittle {
+   display: flex;
+   margin-left: 15px;
+}
+.main__tittle-text {
+   margin-left: 10px;
+   font-family: 'Avenir Next';
+   font-style: normal;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 22px;
+   color: #FFFFFF;
+   flex: none;
+   order: 1;
+   flex-grow: 0;
+}

@@ -5,8 +5,11 @@ import "./Header.css"
 function Header() {
    return (
       <header className="container">
-         <LogoSection />
-         <Menu />
+         <div className="header__container">
+            <LogoSection />
+            <Menu />
+         </div>
+
       </header>
    )
 }

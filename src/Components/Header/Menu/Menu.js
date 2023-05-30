@@ -1,4 +1,5 @@
-import menuIcon from "./../../../menu-icon.svg"
+import "./Menu.css"
+import menuIcon from "./../../../icons/menu-icon.svg"
 
 function Menu() {
    return (

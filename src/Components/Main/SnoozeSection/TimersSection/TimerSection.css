@@ -1,0 +1,18 @@
+.timersSection {
+   margin: 10.5px 13.5px; 
+}
+.timer {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.timer svg circle {
+   height: 331px;
+   width: 331px;
+   fill: transparent;
+   stroke-width: 20;
+   stroke: #80D9FF;
+   transform: translate(14px, 10px);
+   box-shadow: 0px 0px 17.6533px #80D9FF;
+}
