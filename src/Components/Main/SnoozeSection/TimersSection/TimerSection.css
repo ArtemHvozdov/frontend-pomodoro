@@ -1,5 +1,5 @@
-.timersSection {
-   margin: 10.5px 13.5px; 
+/* .timersSection {
+   margin: 10.5px 25px 0px 10.5px; 
 }
 .timer {
    position: relative;
@@ -15,4 +15,24 @@
    stroke: #80D9FF;
    transform: translate(14px, 10px);
    box-shadow: 0px 0px 17.6533px #80D9FF;
+} */
+.timerSection {
+   border: 1px solid 1px;
+   margin-top: 15px;
+}
+.timer svg  {
+   fill: transparent;
+   stroke-width: 20;
+   stroke: #80D9FF;
+}
+
+.timer svg circle {
+   transform: translate(10px, 10px);
+   box-shadow: 0px 0px 17.6533px #80D9FF;
+}
+.timer {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }

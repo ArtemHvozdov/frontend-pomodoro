@@ -1,10 +1,12 @@
+import BasicSection from "../../Basic Components/BasicSection";
 import "./TimeTrackSection.css"
+
 
 function TimeTrackSection() {
    return (
-      <section className="timeTrackSection">
-         
-      </section>
+      <BasicSection>
+         <h1>hello</h1>
+      </BasicSection>
    )
 }
 

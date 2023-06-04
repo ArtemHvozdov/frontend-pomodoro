@@ -1,7 +1,7 @@
 .SnoozeSectionTittle {
-   margin: 16px 32px;
    display: flex;
    justify-content: space-between;
+   margin: 0px 15px 0px 15px;
 }
 
 .SnoozeSectionTittle__text {
