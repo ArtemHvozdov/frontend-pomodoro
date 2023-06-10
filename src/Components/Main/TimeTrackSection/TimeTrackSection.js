@@ -4,8 +4,8 @@ import "./TimeTrackSection.css"
 
 function TimeTrackSection() {
    return (
-      <BasicSection>
-         <h1>hello</h1>
+      <BasicSection className="timeTrackSection">
+         <h1>""</h1>
       </BasicSection>
    )
 }
