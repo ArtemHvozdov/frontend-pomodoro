@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BasicSection from "../../Basic Components/BasicSection";
+import Island from "../../Basic Components/Island";
 import SnoozeSectionTittle from "./SnoozeSectionTittle/SnoozeSectionTittle";
 import TimerSection from "./TimersSection/TimerSection";
 import ButtonsSection from "./ButtonsSection/ButtonsSection";
@@ -52,7 +52,7 @@ function SnoozeSection() {
    }
    return (
 
-      <BasicSection>
+      <Island>
          <SnoozeSectionTittle />
          <TimerSection timeValue={time} percentage={calculatePercentage()}/>
          <ButtonsSection 
@@ -60,7 +60,7 @@ function SnoozeSection() {
             onClickStopBtn={handleStop}
             onClickPauseBtn={handlePause}
          />
-      </BasicSection>
+      </Island>
 
       // <div className="snoozeSection">
       //    <SnoozeSectionTittle />

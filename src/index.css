@@ -16,5 +16,7 @@ code {
 }
 
 #root {
-  width: 390px;
+  /*width: 390px;*/
+  display: flex;
+  flex-flow: column;
 }

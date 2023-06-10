@@ -1,12 +1,12 @@
-import BasicSection from "../../Basic Components/BasicSection";
+import Island from "../../Basic Components/Island";
 import "./TimeTrackSection.css"
 
 
 function TimeTrackSection() {
    return (
-      <BasicSection>
+      <Island>
          <h1>hello</h1>
-      </BasicSection>
+      </Island>
    )
 }
 
