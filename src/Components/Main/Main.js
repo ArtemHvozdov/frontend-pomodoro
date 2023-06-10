@@ -10,15 +10,7 @@ function Main() {
          <MainTittle mainTittleText="Home"/>
          <SnoozeSection />
          <TimeTrackSection />
-         {/* <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/>
-         <BasicSection/> */}
+         
       </main>
    )
 }
