@@ -1,0 +1,33 @@
+.SnoozeSectionTittle {
+   display: flex;
+   justify-content: space-between;
+   margin: 0px 15px 0px 15px;
+}
+
+.SnoozeSectionTittle__text {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 28px;
+   color: #FFFFFF;
+   order: 0;
+   flex-grow: 0;
+}
+
+.SnoozeSectionTittle__btn {
+   box-sizing: border-box;
+   width: 109px;
+   height: 30px;
+   padding: 0px 16px;
+   background: rgba(255, 255, 255, 0.25);
+   border: 1px solid rgba(255, 255, 255, 0.25);
+   border-radius: 40px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 28px;
+   color: #FFFFFF;
+   cursor: pointer;
+}

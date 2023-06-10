@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Island from "../../Basic Components/Island";
+import Island from "../../BasicComponents/Island";
 import SnoozeSectionTittle from "./SnoozeSectionTittle/SnoozeSectionTittle";
 import TimerSection from "./TimersSection/TimerSection";
 import ButtonsSection from "./ButtonsSection/ButtonsSection";

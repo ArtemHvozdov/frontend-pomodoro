@@ -1,4 +1,4 @@
-import Button from "../../../Basic Components/Button";
+import Button from "../../../BasicComponents/Button";
 import "./ButtonsSection.css"
 
 function ButtonsSection(props) {
