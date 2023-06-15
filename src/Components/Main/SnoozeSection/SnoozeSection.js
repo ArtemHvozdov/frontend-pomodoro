@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BasicSection from "../../Basic Components/BasicSection";
+import Island from "../../BasicComponents/Island";
 import SnoozeSectionTittle from "./SnoozeSectionTittle/SnoozeSectionTittle";
 import TimerSection from "./TimersSection/TimerSection";
 import ButtonsSection from "./ButtonsSection/ButtonsSection";
@@ -11,8 +11,8 @@ function SnoozeSection() {
    const [remainingTime, setRemainingTime] = useState(timeValue);
 
    function calculatePercentage() {
-      let percentage = (timeValue / (25 * 60)) * 100;
-      return Math.round(percentage)
+      let percentage = ((25 * 60 - timeValue) / (25 * 60)) * 200;
+      return Math.round(percentage);
    }
 
    let minutes = Math.floor(timeValue / 60)
@@ -41,10 +41,6 @@ function SnoozeSection() {
       }
    }, [isCointing])
 
-   // const circleStyle = {
-   //    strokeDashoffset:`calc(1000 - ((1000 * percentage) / 100)))`,
-   // };
-
    function handleStart() {
       setIsCounting(true)
    }
@@ -59,25 +55,15 @@ function SnoozeSection() {
    }
    return (
 
-      <BasicSection>
+      <Island>
          <SnoozeSectionTittle />
-         <TimerSection timeValue={time} percentage={calculatePercentage()} allTime={timeValue}/>
+         <TimerSection timeValue={time} percentage={calculatePercentage()} allTime={timeValue} />
          <ButtonsSection
             onClickStartBtn={handleStart}
             onClickStopBtn={handleStop}
             onClickPauseBtn={handlePause}
          />
-      </BasicSection>
-
-      // <div className="snoozeSection">
-      //    <SnoozeSectionTittle />
-      //    <TimerSection timeValue={time} percentage={calculatePercentage()}/>
-      //    <ButtonsSection 
-      //       onClickStartBtn={handleStart}
-      //       onClickStopBtn={handleStop}
-      //       onClickPauseBtn={handlePause}
-      //    />
-      // </div>
+      </Island>
    )
 }
 

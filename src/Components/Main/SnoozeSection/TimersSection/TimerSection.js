@@ -7,8 +7,7 @@ function TimerSection(props) {
 
    // // Вычисление стиля для индикатора таймера
    const circleStyle = {
-      
-      strokeDashoffset: `calc( 946 - (946 * (${props.percentage} / 100) )`
+      strokeDasharray: `${944 * (1 - props.percentage / 200)}, 944`
    };
 
    return (
