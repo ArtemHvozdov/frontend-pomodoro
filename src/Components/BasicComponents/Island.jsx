@@ -17,4 +17,4 @@ function Island({children}) {
     )
 }
 
-export default Island;
+export default Island
