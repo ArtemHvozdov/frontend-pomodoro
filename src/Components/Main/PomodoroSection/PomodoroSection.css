@@ -8,3 +8,63 @@
    gap: 4px;
    isolation: isolate;
 }
+.timeline__section {
+   width: 330px;
+   overflow-x: scroll;
+}
+.timeline__section::-webkit-scrollbar {
+   border-radius: 15px;
+   height: 8px;
+}
+
+.timeline__section::-webkit-scrollbar-track {
+   border-radius: 15px;
+   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.timeline__section::-webkit-scrollbar-thumb {
+   background-color: rgba(255, 255, 255, 0.26);
+   border-radius: 15px;
+}
+
+.interval {
+   display: flex;
+}
+.interval-item {
+   display: flex;
+   align-items: center;
+   color: #ffffff;
+}
+.interval-item:not(:first-of-type) {
+   margin-left: 22.5px;
+}
+
+.dote {
+   width: 4px;
+   height: 4px;
+   border-radius: 50%;
+   background: #C4C4C4;
+   margin-left: 22.5px ;
+}
+.timeline {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   margin: 15px 0px;
+   
+}
+.vertical-line-block {
+   width: 35px;
+   display: flex;
+   justify-content: center;
+}
+.vertical-line {
+   height: 45px;
+   border-right: 1px solid #C4C4C4;
+}
+.vertical-line-block:not(:first-of-type) {
+   margin-left: 86.5px;
+}
+.vertical-line-block:first-of-type {
+   margin-left: 17px;
+}
