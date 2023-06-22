@@ -9,8 +9,14 @@
    isolation: isolate;
 }
 .timeline__section {
+   position: relative;
    width: 330px;
+   display: flex;
    overflow-x: scroll;
+   scroll-snap-type: x mandatory;
+}
+.timeline__section-container {
+   display: flex;
 }
 .timeline__section::-webkit-scrollbar {
    border-radius: 15px;
@@ -26,45 +32,17 @@
    background-color: rgba(255, 255, 255, 0.26);
    border-radius: 15px;
 }
-
-.interval {
-   display: flex;
-}
-.interval-item {
-   display: flex;
-   align-items: center;
-   color: #ffffff;
-}
-.interval-item:not(:first-of-type) {
-   margin-left: 22.5px;
-}
-
-.dote {
-   width: 4px;
-   height: 4px;
-   border-radius: 50%;
-   background: #C4C4C4;
-   margin-left: 22.5px ;
-}
-.timeline {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   margin: 15px 0px;
-   
-}
-.vertical-line-block {
-   width: 35px;
+.nearest {
    display: flex;
    justify-content: center;
+   align-items: center;
+   scroll-snap-align: center;
 }
-.vertical-line {
-   height: 45px;
-   border-right: 1px solid #C4C4C4;
-}
-.vertical-line-block:not(:first-of-type) {
-   margin-left: 86.5px;
-}
-.vertical-line-block:first-of-type {
-   margin-left: 17px;
+
+.red-vertical-line {
+   position: absolute;
+   border-right: 1.5px solid red;
+   height: 80px;
+   width: 1px;
+   left: 50%;
 }
