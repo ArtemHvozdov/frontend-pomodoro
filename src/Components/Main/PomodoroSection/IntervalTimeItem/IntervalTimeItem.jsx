@@ -3,10 +3,10 @@ import VerticalLine from "../../../BasicComponents/VerticalLine"
 
 function IntervalTimeItem({ time }) {
    return (
-         <div>
-            <Text text={time} style={{'color': '#ffffff'}}/>
-            <VerticalLine />
-         </div>
+      <div>
+         <Text text={time} style={{ 'color': '#ffffff' }} />
+         <VerticalLine />
+      </div>
    )
 }
 
