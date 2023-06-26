@@ -3,11 +3,9 @@ import menuIcon from "./../../../icons/menu-icon.svg"
 
 function Menu() {
    return (
-      <section>
          <div className="menu__icon">
-            <img src={menuIcon}></img>
+            <img src={menuIcon} alt="Menu"></img>
          </div>
-      </section>
    )
 }
 

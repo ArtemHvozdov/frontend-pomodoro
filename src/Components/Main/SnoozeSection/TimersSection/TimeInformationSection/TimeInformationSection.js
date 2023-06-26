@@ -4,8 +4,6 @@ import "./TimeInformationSection.css"
 function TimeInformationSection(props) {
    const isFinished = Number(props.timeValue.minutes) === 0 && Number(props.timeValue.seconds) === 0;
 
-
-
    return (
       <section className="timeInformationSection">
          <div className="timer__minutes">

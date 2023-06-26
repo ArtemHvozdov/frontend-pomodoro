@@ -7,14 +7,14 @@ import "./Main.css"
 function Main() {
 
       return (
-         <main>
-               <MainTittle mainTittleText="Home"/>
-               <SnoozeSection/>
-               <PomodoroSection/>
-               <ActivitySection/>
-         </main>
+            <main>
+                  <MainTittle mainTittleText="Home" />
+                  <SnoozeSection />
+                  <PomodoroSection />
+                  <ActivitySection />
+            </main>
       )
-   
+
 }
 
 export default Main;

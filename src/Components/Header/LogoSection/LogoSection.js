@@ -8,7 +8,6 @@ function LogoSection() {
          <div className="logo__img">
             <img src={logo} alt="Pomodoro"></img>
          </div>
-
          <LogoTextSection text="Senior Pomodoro"/>
 
       </setion>

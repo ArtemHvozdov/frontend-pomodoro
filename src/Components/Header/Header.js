@@ -4,12 +4,11 @@ import "./Header.css"
 
 function Header() {
    return (
-      <header className="container">
+      <header>
          <div className="header__container">
             <LogoSection />
             <Menu />
          </div>
-
       </header>
    )
 }
