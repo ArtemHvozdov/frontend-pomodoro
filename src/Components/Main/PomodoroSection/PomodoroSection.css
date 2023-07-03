@@ -13,7 +13,6 @@
    width: 330px;
    display: flex;
    overflow-x: scroll;
-   scroll-snap-type: x mandatory;
 }
 .timeline__section-container {
    display: flex;
@@ -33,10 +32,14 @@
    border-radius: 15px;
 }
 .nearest {
-   display: flex;
-   justify-content: center;
-   scroll-snap-align: center;
-}
+   
+   /* scroll-snap-align: center;
+
+   border: 1px solid black;
+   width: 90px;
+   margin: 0 auto; */
+   
+} 
 
 .red-vertical-line {
    position: absolute;
@@ -44,4 +47,5 @@
    height: 80px;
    width: 1px;
    left: 50%;
+   z-index: 1;
 }
