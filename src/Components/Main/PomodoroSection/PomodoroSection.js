@@ -45,7 +45,7 @@ function PomodoroSection() {
       const timeLineSection = parentContainer.current;
       const intervalTimeItem = childContainer.current;
 
-      const defaultScrollLeftValue = (timeLineSection.scrollWidth / 2) - 139;
+      const defaultScrollLeftValue = (timeLineSection.scrollWidth / 2) - 120;
       setScrollValue(defaultScrollLeftValue);
 
 

@@ -49,3 +49,9 @@
    left: 50%;
    z-index: 1;
 }
+
+.timeline__section-container span {
+   display: inline-block;
+   width: 47.09px;
+   text-align: center;
+}
