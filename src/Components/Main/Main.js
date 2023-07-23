@@ -1,7 +1,7 @@
 import MainTittle from "./MainTittle/Maintittle"
 import SnoozeSection from "./SnoozeSection/SnoozeSection"
 import PomodoroSection from "./PomodoroSection/PomodoroSection"
-import ActivitySection from "./ActivitySection/ActivitySection"
+import ActivityComponent from "./activity/activity-component"
 import "./Main.css"
 
 function Main() {
@@ -11,7 +11,7 @@ function Main() {
                <MainTittle mainTittleText="Home"/>
                <SnoozeSection/>
                <PomodoroSection/>
-               <ActivitySection/>
+               <ActivityComponent/>
          </main>
       )
    

@@ -19,4 +19,4 @@ const IslandBodyRow = ({rowClassName, rowText, valueClassName, valueText}) => {
     )
 }
 
-export default IslandBodyRow;
+export default IslandBodyRow
