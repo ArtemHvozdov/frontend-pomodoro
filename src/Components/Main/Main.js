@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import MainTittle from "./MainTittle/Maintittle"
 import SnoozeSection from "./SnoozeSection/SnoozeSection"
 import PomodoroSection from "./PomodoroSection/PomodoroSection"
@@ -15,12 +14,10 @@ function Main({ statusMenu }) {
                         <SnoozeSection />
                         <PomodoroSection />
                         <ActivitySection />
-                        <AppMenu />
                   </div>
             {statusMenu && <AppMenu />}
             </main>
       )
-
 }
 
 export default Main;

@@ -6,21 +6,6 @@ import Notifications_Icon from "./../../../icons/menu-item-icons/Notifications_I
 import "./AppMenu.css"
 
 function AppMenu() {
-   function connectWebSocket() {
-      const socket = new WebSocket('ws:/url')
-
-      socket.onopen = () => {
-         console.log("WebSocket connection opened")
-         // socket.send("Hello, pomodo-server!")
-      }
-
-      socket.onmessage = event => {
-         const message = event.data;
-         console.log('Recived message:', message)
-      }
-
-   }
-
    return (
       <div className="appmenu-container">
          <ul className="appmenu-list">
@@ -46,13 +31,12 @@ function AppMenu() {
             </li>
             <li className="list-item">
                <MenuItem 
-                     href="#"
+                     href="http://localhost:8081/oauth2/authorization/google"
                      classNameOfLink="menu-link"
                      srcIcon={Profile_Icon}
                      classNameOfIcon="list__item-icon"
                      text="Login"
                      classNameOfText="menu__item-text"
-                     onClick={connectWebSocket}
                />
             </li>
             <li className="list-item">
