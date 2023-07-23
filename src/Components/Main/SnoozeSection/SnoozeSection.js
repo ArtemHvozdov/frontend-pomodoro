@@ -3,12 +3,10 @@ import Island from "../../BasicComponents/Island";
 import SnoozeSectionTittle from "./SnoozeSectionTittle/SnoozeSectionTittle";
 import TimerSection from "./TimersSection/TimerSection";
 import ButtonsSection from "./ButtonsSection/ButtonsSection";
-import "./SnoozeSection.css"
 
 function SnoozeSection() {
    const [timeValue, setTimeValue] = useState(25 * 60)
    const [isCointing, setIsCounting] = useState(false)
-   const [remainingTime, setRemainingTime] = useState(timeValue);
 
    function calculatePercentage() {
       let percentage = ((25 * 60 - timeValue) / (25 * 60)) * 200;
@@ -33,8 +31,6 @@ function SnoozeSection() {
    useEffect(() => {
       const interval = setInterval(() => {
          isCointing && setTimeValue((timeValue) => (timeValue >= 1 ? timeValue - 1 : 0))
-         setRemainingTime((prevTime) => prevTime - 1)
-
       }, 1000)
       return () => {
          clearInterval(interval);
@@ -53,8 +49,8 @@ function SnoozeSection() {
       setIsCounting(false)
 
    }
-   return (
 
+   return (
       <Island>
          <SnoozeSectionTittle />
          <TimerSection timeValue={time} percentage={calculatePercentage()} allTime={timeValue} />

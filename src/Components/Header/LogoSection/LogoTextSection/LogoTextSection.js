@@ -1,8 +1,9 @@
+import Text from "../../../BasicComponents/Text";
 import "./LogoTextSection.css"
 
 function LogoTextSection(props) {
    return (
-      <p className="logo__text">{props.text}</p>
+      <Text className="logo__text" text={props.text} />
    )
 }
 

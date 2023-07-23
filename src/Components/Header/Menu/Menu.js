@@ -1,13 +1,11 @@
 import "./Menu.css"
 import menuIcon from "./../../../icons/menu-icon.svg"
 
-function Menu() {
+function Menu({onClick}) {
    return (
-      <section>
-         <div className="menu__icon">
-            <img src={menuIcon}></img>
+         <div className="menu__icon" onClick={onClick}>
+            <img src={menuIcon} alt="Menu"></img>
          </div>
-      </section>
    )
 }
 
