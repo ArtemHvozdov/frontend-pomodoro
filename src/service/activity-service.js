@@ -1,5 +1,17 @@
-function getAllActivities() {
-    return ['Activity1', 'Activity2', 'Activity3', 'Activity4']
-}
+import axios from 'axios';
 
-export default getAllActivities
+const API_BASE_URL = 'http://localhost:8080/api/v1/pomodoro';
+
+const getActivityNames = async () => {
+    try {
+        const response = await axios.get(`${API_BASE_URL}/activities`);
+        const activities = response.data;
+
+        return activities.map((activity) => activity.name);
+    } catch (error) {
+        console.error('Error fetching activities:', error);
+        return [];
+    }
+};
+
+export default getActivityNames;
