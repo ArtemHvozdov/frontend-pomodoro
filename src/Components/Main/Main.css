@@ -1,5 +1,12 @@
-main {
+.main-container {
+   display: flex;
+   justify-content: flex-end;
    padding: 0px 15px;
+   overflow: hidden;
+}
+
+.content {
+   flex: 1;
    display: flex;
    flex-flow: column;
 }

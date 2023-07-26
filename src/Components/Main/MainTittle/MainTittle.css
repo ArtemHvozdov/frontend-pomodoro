@@ -1,6 +1,6 @@
 .main__tittle {
    display: flex;
-   margin-left: 15px;
+   margin: 15px;
 }
 .main__tittle-text {
    margin-left: 10px;
