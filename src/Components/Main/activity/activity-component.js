@@ -1,38 +1,38 @@
-import React, {useState, useEffect} from 'react';
-import TitleRow from './title-row';
-import Island from '../../BasicComponents/Island';
-import IslandBodyContainer from '../../BasicComponents/IslandBodyContainer';
-import IslandBodyRow from '../../BasicComponents/IslandBodyRow';
-import './FontStyle.css';
-import getAllActivities from "../../../service/activity-service";
+import React, {useState, useEffect} from 'react'
+import TitleRow from './title-row'
+import Island from '../../BasicComponents/Island'
+import IslandBodyContainer from '../../BasicComponents/IslandBodyContainer'
+import IslandBodyRow from '../../BasicComponents/IslandBodyRow'
+import './activity-style.css'
+import getAllActivities from "../../../service/activity-service"
 
 const ActivityComponent = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-    const [activities, setActivities] = useState([]);
-    const [selectedItem, setSelectedItem] = useState("");
+    const [activities, setActivities] = useState([])
+    const [selectedItem, setSelectedItem] = useState("")
 
     useEffect(() => {
         const fetchActivities = async () => {
-            const activityNames = await getAllActivities();
-            setActivities(activityNames);
+            const activityNames = await getAllActivities()
+            setActivities(activityNames)
 
-            setSelectedItem(activityNames[0]);
-        };
+            setSelectedItem(activityNames[0])
+        }
 
-        fetchActivities();
-    }, []);
+        fetchActivities()
+    }, [])
 
     const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
-    };
+        setIsDropdownOpen(!isDropdownOpen)
+    }
 
     const handleItemClick = (item) => {
         console.log(`Choosing item - ${item}`)
-        setSelectedItem(item);
-        setIsDropdownOpen(false);
-    };
+        setSelectedItem(item)
+        setIsDropdownOpen(false)
+    }
 
-    const activityList = (activities) => {
+    const getActivities = () => {
         return (
             <IslandBodyContainer showSpan={true}>
                 <ul>
@@ -49,10 +49,10 @@ const ActivityComponent = () => {
                     ))}
                 </ul>
             </IslandBodyContainer>
-        );
-    };
+        )
+    }
 
-    const activityBody = () => {
+    const getReportRows = () => {
         return (
             <IslandBodyContainer>
                 <IslandBodyRow
@@ -74,10 +74,10 @@ const ActivityComponent = () => {
                     valueText='0'
                 />
             </IslandBodyContainer>
-        );
-    };
+        )
+    }
 
-    const body = isDropdownOpen ? activityList(activities) : activityBody();
+    const body = isDropdownOpen ? getActivities() : getReportRows()
 
     return (
         <Island>
@@ -89,7 +89,7 @@ const ActivityComponent = () => {
             />
             {body}
         </Island>
-    );
-};
+    )
+}
 
-export default ActivityComponent;
+export default ActivityComponent
