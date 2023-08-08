@@ -1,28 +1,32 @@
 .appmenu-container {
-   margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px 30px;
 }
+
 .list-item {
-   width: 145px;
+    width: 145px;
 }
+
 .appmenu-container ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .appmenu-container a {
-   text-decoration: none;
+    text-decoration: none;
 }
 
 .menu__item-text {
-   color: rgba(255, 255, 255, 0.5);
-   margin-left: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 15px;
 }
+
 .menu__item-text:hover {
-   color: #ffff;
+    color: #ffff;
 }
+
 .menu-link {
-   display: flex;
-   align-items: center;
-   margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 }

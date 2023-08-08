@@ -1,44 +1,48 @@
 .timeInformationSection {
-   position: absolute;
-   text-align: center;
-   margin-top: 50px;
+    position: absolute;
+    text-align: center;
+    margin-top: 50px;
 }
+
 .timer__minutes {
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 700;
-   font-size: 64px;
-   line-height: 25px;
-   display: flex;
-   color: #FFFFFF;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 25px;
+    display: flex;
+    color: #FFFFFF;
 }
 
 .timer__pulse {
-   position: relative;
-   display: inline-block;
-   animation: pulse 1.7s infinite;
-   transform-origin: center;
+    position: relative;
+    display: inline-block;
+    animation: pulse 1.7s infinite;
+    transform-origin: center;
 }
 
 @keyframes pulse {
-   0% {
-      transform: scale(1);
-   }
-   50% {
-      transform: scale(1.2);
-   }
-   100% {
-      transform: scale(1);
-   }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
+
 .timer__procents {
-   margin-top: 20px;
-   font-family: 'Montserrat';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 44.1333px;
-   line-height: 54px;
-   text-align: center;
-   color: #80D9FF;
-   text-shadow: 0px 0px 4.41333px #80D9FF;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44.1333px;
+    line-height: 54px;
+    text-align: center;
+    color: #80D9FF;
+    text-shadow: 0px 0px 4.41333px #80D9FF;
 }

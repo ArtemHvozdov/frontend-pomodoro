@@ -1,4 +1,4 @@
-function IslandBodyContainer({children, showSpan}) {
+function IslandBodyContainer({ children, showSpan }) {
     const style = {
         display: 'flex',
         flexFlow: 'column',

@@ -1,0 +1,14 @@
+.intervalItem-tittle {
+    width: 94px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intervalItem {
+    margin-left: -4px;
+}
+
+.container-vertical-line {
+    display: flex;
+    justify-content: center;
+}

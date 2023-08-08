@@ -1,57 +1,51 @@
 .pomodoroSection {
-   margin-top: 15px;
-   box-sizing: border-box;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: flex-start;
-   gap: 4px;
-   isolation: isolate;
+    margin-top: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+    isolation: isolate;
 }
+
 .timeline__section {
-   position: relative;
-   width: 330px;
-   display: flex;
-   overflow-x: scroll;
+    position: relative;
+    width: 330px;
+    display: flex;
+    overflow-x: hidden;
 }
+
+.timeline__section:hover {
+    overflow-x: auto;
+}
+
 .timeline__section-container {
-   display: flex;
+    display: flex;
 }
+
 .timeline__section::-webkit-scrollbar {
-   border-radius: 15px;
-   height: 8px;
+    border-radius: 15px;
+    height: 10px;
+    cursor: pointer;
 }
 
 .timeline__section::-webkit-scrollbar-track {
-   border-radius: 15px;
-   background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .timeline__section::-webkit-scrollbar-thumb {
-   background-color: rgba(255, 255, 255, 0.26);
-   border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.26);
+    border-radius: 15px;
+    cursor: pointer;
 }
-.nearest {
-   
-   /* scroll-snap-align: center;
-
-   border: 1px solid black;
-   width: 90px;
-   margin: 0 auto; */
-   
-} 
 
 .red-vertical-line {
-   position: absolute;
-   border-right: 1.5px solid red;
-   height: 80px;
-   width: 1px;
-   left: 50%;
-   z-index: 1;
-}
-
-.timeline__section-container span {
-   display: inline-block;
-   width: 47.09px;
-   text-align: center;
+    border-right: 1px solid red;
+    height: 80px;
+    width: 0;
+    margin: 0 auto;
+    margin-bottom: -80px;
+    z-index: 2;
 }

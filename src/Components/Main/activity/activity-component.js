@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import TitleRow from './title-row'
 import Island from '../../BasicComponents/Island'
 import IslandBodyContainer from '../../BasicComponents/IslandBodyContainer'

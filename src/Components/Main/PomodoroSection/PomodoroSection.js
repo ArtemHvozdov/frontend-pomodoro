@@ -1,85 +1,67 @@
-import { useRef, useEffect, useState } from 'react';
-import Island from "../../BasicComponents/Island";
-import Dote from "../../BasicComponents/Dote";
-import IntervalTimeItem from "./IntervalTimeItem/IntervalTimeItem";
+import { useRef, useEffect, useState } from 'react'
+import Island from "../../BasicComponents/Island"
+import IntervalTimeItem from "./IntervalTimeItem/IntervalTimeItem"
+import generateTimeIntervals from '../../../utility/time-utility'
 import "./PomodoroSection.css"
 
-
 function PomodoroSection() {
-   const currentTime = new Date();
-   const startHour = currentTime.getHours();
-   const startMinute = Math.floor(currentTime.getMinutes() / 30) * 30;
+    const [currentTime, setCurrentTime] = useState(new Date())
+    
+    const timeIntervals = generateTimeIntervals(currentTime)
 
-   const timeIntervals = [];
+    const parentContainer = useRef(null)
+    const childContainer = useRef(null)
 
-   let initialHour = (startHour - 12 + 24) % 24;
+    let minutes = currentTime.getMinutes()
+    let seconds = currentTime.getSeconds()
 
-   for (let i = 0; i < 48; i++) {
-      const hourOffset = Math.floor((startMinute + 30 * i) / 60);
-      const hourInterval = (initialHour + hourOffset) % 24;
-      const minuteInterval = (startMinute + 30 * i) % 60;
+    useEffect(() => {
 
-      const formattedHour = hourInterval.toString().padStart(2, "0");
-      const formattedMinute = minuteInterval.toString().padStart(2, "0");
+        const timeLineSection = parentContainer.current;
+        let halfOfFullWidth = timeLineSection.scrollWidth / 2
 
-      const interval = `${formattedHour}:${formattedMinute}`;
+        let defaultScrollLeftValue = 0
 
-      timeIntervals.push(interval);
-   }
+        if (minutes === 0 || minutes === 30) {
+            defaultScrollLeftValue = halfOfFullWidth + (seconds * 0.05) - 121.1
+        } else if (minutes === 45) {
+            defaultScrollLeftValue = halfOfFullWidth - 119.5 + 43
+        } else if (minutes > 30 && minutes <= 59) {
+            defaultScrollLeftValue = halfOfFullWidth + ((minutes - 30) * 3) + (seconds * 0.05) - 121.1
+        } else {
+            defaultScrollLeftValue = halfOfFullWidth + (minutes * 3) + (seconds * 0.05) - 121.1
+        }
 
-   const nearestIndex = timeIntervals.findIndex((time) => {
-      const [hour, minute] = time.split(":");
-      const intervalTime = new Date();
-      intervalTime.setHours(Number(hour));
-      intervalTime.setMinutes(Number(minute));
-      return intervalTime > currentTime;
-   })
+        timeLineSection.scrollLeft = defaultScrollLeftValue
 
-   const parentContainer = useRef(null);
-   const childContainer = useRef(null);
+        const interval = setInterval(() => {
+            setCurrentTime(new Date())
+        }, 20000)
 
-   const [scrollValue, setScrollValue] = useState(0);
+        return () => {
+            clearInterval(interval)
+        }
 
-   useEffect(() => {
-
-      const timeLineSection = parentContainer.current;
-      const intervalTimeItem = childContainer.current;
-
-      const defaultScrollLeftValue = (timeLineSection.scrollWidth / 2) - 120;
-      setScrollValue(defaultScrollLeftValue);
+    }, [currentTime])
 
 
-      const interval = setInterval(() => {
-         setScrollValue((prevScrollValue) => prevScrollValue + 1);
-      }, 22000)
 
-      return () => {
-         clearInterval(interval);
-      }
-   }, [])
-
-   useEffect(() => {
-      const timeLineSection = parentContainer.current;
-      timeLineSection.scrollLeft = scrollValue;
-   }, [scrollValue]);
-
-   return (
-      <Island>
-         <div className="red-vertical-line"></div>
-         <div className="timeline__section" ref={parentContainer}>
-            {timeIntervals.map((time, index) => (
-               <div
-                  className={`timeline__section-container ${index === nearestIndex ? "nearest" : ""}`}
-                  key={index}
-                  ref={childContainer}
-               >
-                  <IntervalTimeItem time={time} />
-                  {index < timeIntervals.length - 1 && <Dote />}
-               </div>
-            ))}
-         </div>
-      </Island >
-   )
+    return (
+        <Island>
+            <div className="red-vertical-line"></div>
+            <div className="timeline__section" ref={parentContainer}>
+                {timeIntervals.map((time, index) => (
+                    <div
+                        className={`timeline__section-container`}
+                        key={index}
+                        ref={childContainer}
+                    >
+                        <IntervalTimeItem time={time} />
+                    </div>
+                ))}
+            </div>
+        </Island >
+    )
 }
 
 export default PomodoroSection;

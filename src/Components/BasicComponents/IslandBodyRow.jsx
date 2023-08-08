@@ -1,7 +1,7 @@
 import Text from "./Text";
-import {useState} from "react";
+import { useState } from "react";
 
-const IslandBodyRow = ({rowClassName, rowText, valueClassName, valueText, hoverable = false}) => {
+const IslandBodyRow = ({ rowClassName, rowText, valueClassName, valueText, hoverable = false }) => {
     const rowContainerStyle = {
         display: 'flex',
         justifyContent: 'space-between',
@@ -26,16 +26,16 @@ const IslandBodyRow = ({rowClassName, rowText, valueClassName, valueText, hovera
         <div style={{
             ...rowContainerStyle,
             backgroundColor: isHovered ? 'rgba(255, 255, 255, 0.5)' : 'transparent',
-            borderRadius: isHovered ? '10px': 0
+            borderRadius: isHovered ? '10px' : 0
         }}
-             onMouseEnter={handleMouseEnter}
-             onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             <div>
-                <Text className={rowClassName} text={rowText}/>
+                <Text className={rowClassName} text={rowText} />
             </div>
             <div>
-                <Text className={valueClassName} text={valueText}/>
+                <Text className={valueClassName} text={valueText} />
             </div>
         </div>
     )
