@@ -12,3 +12,12 @@
     display: flex;
     justify-content: center;
 }
+
+.red-vertical-line {
+    position: absolute;
+    border-right: 1px solid red;
+    height: 90px;
+    width: 0px;
+    margin-top: -90px;
+    z-index: 2;
+}
