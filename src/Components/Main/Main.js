@@ -1,9 +1,9 @@
-import MainTittle from "./MainTittle/Maintittle"
-import SnoozeSection from "./SnoozeSection/SnoozeSection"
-import PomodoroSection from "./PomodoroSection/PomodoroSection"
+import MainTittle from "./main-tittle/main-tittle"
+import SnoozeSection from "./snooze-section/snooze-section"
+import PomodoroSection from "./pomodoro-section/pomodoro-section"
 import ActivityComponent from "./activity/activity-component"
-import AppMenu from "./AppMenu/AppMenu"
-import "./Main.css"
+import Menu from "./menu/menu"
+import "./main.css"
 import StatisticsComponent from "./statistics/statistics-component"
 
 function Main({ statusMenu }) {
@@ -17,7 +17,7 @@ function Main({ statusMenu }) {
                 <ActivityComponent />
                 <StatisticsComponent />
             </div>
-            {statusMenu && <AppMenu />}
+            {statusMenu && <Menu />}
         </main>
     )
 }

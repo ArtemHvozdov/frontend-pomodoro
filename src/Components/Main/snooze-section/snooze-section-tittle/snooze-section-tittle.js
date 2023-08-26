@@ -1,6 +1,6 @@
-import Text from "../../../BasicComponents/Text";
-import Button from "../../../BasicComponents/Button";
-import "./SnoozeSectionTittle.css"
+import Text from "./../../../basic-components/text";
+import Button from "./../../../basic-components/button";
+import "./snooze-section-tittle.css"
 
 function SnoozeSectionTittle() {
     return (

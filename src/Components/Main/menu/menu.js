@@ -1,11 +1,11 @@
-import MenuItem from "./MenuItem";
+import MenuItem from "./menu-item"
 import Menu_Button_Icon from "./../../../icons/menu-item-icons/Menu_Button_Icon.svg"
 import Activities_Icon from "./../../../icons/menu-item-icons/Activities_Icon.svg"
 import Profile_Icon from "./../../../icons/menu-item-icons/Profile_Icon.svg"
 import Notifications_Icon from "./../../../icons/menu-item-icons/Notifications_Icon.svg"
-import "./AppMenu.css"
+import "./menu.css"
 
-function AppMenu() {
+function Menu() {
     return (
         <div className="appmenu-container">
             <ul className="appmenu-list">
@@ -54,4 +54,4 @@ function AppMenu() {
     )
 }
 
-export default AppMenu;
+export default Menu;

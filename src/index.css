@@ -1,25 +1,35 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fonts/AvenirNext.woff2') format('woff2'),
+        url('./fonts/AvenirNext.woff') format('woff'),
+        url('./fonts/AvenirNext.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300,400,700&family=Montserrat:wght@300&display=swap');
 
 body {
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(to bottom, #3483AF, #211F89);
-  background-attachment: fixed;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #3483AF, #211F89);
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', Montserrat,
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', Montserrat,
+        monospace;
 }

@@ -1,5 +1,5 @@
-import TimeInformationSection from "./TimeInformationSection/TimeInformationSection";
-import "./TimerSection.css"
+import TimeInformationSection from "./time-information-section/time-information-section";
+import "./timer-section.css"
 
 function TimerSection(props) {
     const circleStyle = {

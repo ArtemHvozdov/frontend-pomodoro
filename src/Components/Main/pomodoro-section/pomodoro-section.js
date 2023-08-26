@@ -1,10 +1,10 @@
 import { useRef, useEffect, useState } from 'react'
-import Island from "../../BasicComponents/Island"
-import IntervalTimeItem from "./IntervalTimeItem/IntervalTimeItem"
+import Island from "./../../basic-components/island"
+import IntervalTimeItem from "./interval-time-item/interval-time-item"
 import generateTimeIntervals from '../../../utility/time-utility'
 import checkTimeCondition from '../../../utility/checkTimeCondition-utility'
 import calculateMarginForRedLine from '../../../utility/calculateMarginForRedLine-utility'
-import "./PomodoroSection.css"
+import "./pomodoro-section.css"
 
 function PomodoroSection() {
     const [currentTime, setCurrentTime] = useState(new Date())

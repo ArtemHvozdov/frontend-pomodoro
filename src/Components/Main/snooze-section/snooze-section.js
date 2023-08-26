@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Island from "../../BasicComponents/Island";
-import SnoozeSectionTittle from "./SnoozeSectionTittle/SnoozeSectionTittle";
-import TimerSection from "./TimersSection/TimerSection";
-import ButtonsSection from "./ButtonsSection/ButtonsSection";
+import Island from "./../../basic-components/island";
+import SnoozeSectionTittle from "./snooze-section-tittle/snooze-section-tittle";
+import TimerSection from "./timers-section/timer-section";
+import ButtonsSection from "./buttons-section/buttons-section";
 
 function SnoozeSection() {
     const [timeValue, setTimeValue] = useState(25 * 60)
@@ -40,14 +40,13 @@ function SnoozeSection() {
     function handleStart() {
         setIsCounting(true)
     }
+
     function handleStop() {
         setIsCounting(false)
         setTimeValue(25 * 60)
-
     }
     function handlePause() {
         setIsCounting(false)
-
     }
 
     return (

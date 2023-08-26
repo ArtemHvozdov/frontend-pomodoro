@@ -1,4 +1,4 @@
-import Text from "./Text";
+import Text from "./text";
 import { useState } from "react";
 
 const IslandBodyRow = ({ rowClassName, rowText, valueClassName, valueText, hoverable = false }) => {

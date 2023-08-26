@@ -1,8 +1,8 @@
-import Island from '../../BasicComponents/Island'
+import Island from '../../basic-components/island'
 import React, { useState } from 'react'
 import TitleRow from '../activity/title-row'
-import IslandBodyContainer from '../../BasicComponents/IslandBodyContainer'
-import IslandBodyRow from '../../BasicComponents/IslandBodyRow'
+import IslandBodyContainer from '../../basic-components/island-body-container'
+import IslandBodyRow from '../../basic-components/island-body-row'
 import getPeriods from "../../../utility/statistics-utility"
 
 const StatisticsComponent = () => {

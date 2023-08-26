@@ -1,5 +1,5 @@
 import DropdownArrowComponent from './dropdown-arrow-component'
-import Text from '../../BasicComponents/Text'
+import Text from '../../basic-components/text'
 
 const TitleRow = ({ text, className, showSpan, onClick }) => {
     const outerDivStyle = {

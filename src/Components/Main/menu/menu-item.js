@@ -1,4 +1,4 @@
-import Text from './../../BasicComponents/Text.jsx'
+import Text from './../../basic-components/text'
 
 function MenuItem(props) {
     return (

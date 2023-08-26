@@ -1,5 +1,5 @@
-import Text from "../../../BasicComponents/Text";
-import "./LogoTextSection.css"
+import Text from "./../../../basic-components/text";
+import "./logo-text-section.css"
 
 function LogoTextSection(props) {
     return (

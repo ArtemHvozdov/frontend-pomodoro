@@ -1,7 +1,7 @@
-import "./Menu.css"
+import "./menu-toggle.css"
 import menuIcon from "./../../../icons/menu-icon.svg"
 
-function Menu({ onClick }) {
+function MenuToggle({ onClick }) {
     return (
         <div className="menu__icon" onClick={onClick}>
             <img src={menuIcon} alt="Menu"></img>
@@ -9,4 +9,4 @@ function Menu({ onClick }) {
     )
 }
 
-export default Menu;
+export default MenuToggle;

@@ -1,5 +1,5 @@
-import Button from "../../../BasicComponents/Button";
-import "./ButtonsSection.css"
+import Button from "./../../../basic-components/button";
+import "./buttons-section.css"
 
 function ButtonsSection(props) {
     return (

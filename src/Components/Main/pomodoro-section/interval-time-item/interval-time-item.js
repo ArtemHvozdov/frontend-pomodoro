@@ -1,7 +1,7 @@
-import Dote from "../../../BasicComponents/Dote"
-import Text from "../../../BasicComponents/Text"
-import VerticalLine from "../../../BasicComponents/VerticalLine"
-import "./IntervalTimeItem.css"
+import Dote from "./../../../basic-components/dote"
+import Text from "./../../../basic-components/text"
+import VerticalLine from "./../../../basic-components/vertical-line"
+import "./interval-time-item.css"
 
 function IntervalTimeItem({ time, isCurrent, marginLeftValue }) {
     return (

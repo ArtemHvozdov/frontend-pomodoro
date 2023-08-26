@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import TitleRow from './title-row'
-import Island from '../../BasicComponents/Island'
-import IslandBodyContainer from '../../BasicComponents/IslandBodyContainer'
-import IslandBodyRow from '../../BasicComponents/IslandBodyRow'
+import Island from './../../basic-components/island'
+import IslandBodyContainer from './../../basic-components/island-body-container'
+import IslandBodyRow from './../../basic-components/island-body-row'
 import './activity-style.css'
 import getAllActivities from "../../../service/activity-service"
 

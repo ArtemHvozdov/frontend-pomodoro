@@ -1,5 +1,5 @@
-import Text from "../../../../BasicComponents/Text";
-import "./TimeInformationSection.css"
+import Text from "./../../../../basic-components/text";
+import "./time-information-section.css"
 
 function TimeInformationSection(props) {
     const isFinished = Number(props.timeValue.minutes) === 0 && Number(props.timeValue.seconds) === 0;

@@ -1,5 +1,5 @@
-import LogoTextSection from "./LogoTextSection/LogoTextSection";
-import "./LogoSection.css"
+import LogoTextSection from "./logo-text-section/logo-text-section";
+import "./logo-section.css"
 import logo from "./../../../icons/logo.svg"
 
 function LogoSection() {

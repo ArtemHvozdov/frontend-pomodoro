@@ -2,6 +2,10 @@
     margin: 30px 0px 0px 30px;
 }
 
+.appmenu-list {
+    font-family: 'Avenir Next';
+}
+
 .list-item {
     width: 145px;
 }
@@ -19,10 +23,15 @@
 .menu__item-text {
     color: rgba(255, 255, 255, 0.5);
     margin-left: 15px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .menu__item-text:hover {
     color: #ffff;
+    font-weight: 600;
 }
 
 .menu-link {

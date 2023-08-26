@@ -1,5 +1,5 @@
-import Text from "../../BasicComponents/Text";
-import "./MainTittle.css"
+import Text from "./../../basic-components/text";
+import "./main-tittle.css"
 import clockIcon from "./../../../icons/clock-icon.svg"
 
 function MainTittle(props) {
