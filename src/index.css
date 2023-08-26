@@ -1,13 +1,16 @@
 @font-face {
     font-family: 'Avenir Next';
-    src: url('./fonts/AvenirNext.woff2') format('woff2'),
-        url('./fonts/AvenirNext.woff') format('woff'),
-        url('./fonts/AvenirNext.ttf') format('truetype');
+    src: url('fonts/avenir/AvenirNext.woff2') format('woff2'),
+        url('fonts/avenir/AvenirNext.woff') format('woff'),
+        url('fonts/avenir/AvenirNext.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300,400,700&family=Montserrat:wght@300&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
 
 body {
     padding: 0;

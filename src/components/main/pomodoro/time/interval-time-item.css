@@ -1,0 +1,23 @@
+.interval-item-tittle {
+    width: 94px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.interval-item {
+    margin-left: -4px;
+}
+
+.container-vertical-line {
+    display: flex;
+    justify-content: center;
+}
+
+.red-vertical-line {
+    position: absolute;
+    border-right: 1px solid red;
+    height: 90px;
+    width: 0px;
+    margin-top: -90px;
+    z-index: 2;
+}
