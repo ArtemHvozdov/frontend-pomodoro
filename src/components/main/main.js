@@ -1,10 +1,11 @@
 import MainTittle from "./tittle/main-tittle"
 import SnoozeSection from "./snooze/snooze-section"
 import PomodoroSection from "./pomodoro/pomodoro-section"
-import ActivityComponent from "./activity/activity-component"
+import ActivityReport from "./activity/activity-report"
 import Menu from "./menu/menu"
 import "./main.css"
-import StatisticsComponent from "./statistics/statistics-component"
+import StatisticsReport from "./statistics/statistics-component"
+import ActivityTags from "./activity/tags/activity-tags";
 
 function Main({ statusMenu }) {
 
@@ -14,8 +15,9 @@ function Main({ statusMenu }) {
                 <MainTittle mainTittleText="Home" />
                 <SnoozeSection />
                 <PomodoroSection />
-                <ActivityComponent />
-                <StatisticsComponent />
+                <ActivityReport />
+                <StatisticsReport />
+                <ActivityTags />
             </div>
             {statusMenu && <Menu />}
         </main>

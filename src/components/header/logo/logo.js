@@ -1,16 +1,16 @@
-import LogoTextSection from "./text/logo-text-section";
-import "./logo-section.css"
+import LogoText from "./text/logo-text";
+import "./logo.css"
 import logo from "./../../../icons/logo.svg"
 
-function LogoSection() {
+function Logo() {
     return (
         <section className="logo__section">
             <div className="logo__img">
                 <img src={logo} alt="Pomodoro"></img>
             </div>
-            <LogoTextSection text="Senior Pomodoro" />
+            <LogoText text="Senior Pomodoro" />
         </section>
     )
 }
 
-export default LogoSection;
+export default Logo;

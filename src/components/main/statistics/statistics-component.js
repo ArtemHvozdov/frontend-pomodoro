@@ -1,9 +1,10 @@
 import Island from '../../common/island'
 import React, { useState } from 'react'
 import TitleRow from '../activity/title-row'
-import IslandBodyContainer from '../../common/island-body-container'
+import IslandBody from '../../common/island-body'
 import IslandBodyRow from '../../common/island-body-row'
 import getPeriods from "../../../utility/statistics-utility"
+import DropdownArrowComponent from "../activity/dropdown-arrow-component";
 
 const StatisticsComponent = () => {
 
@@ -17,7 +18,7 @@ const StatisticsComponent = () => {
 
     const getReportRows = () => {
         return (
-            <IslandBodyContainer>
+            <IslandBody>
                 <IslandBodyRow
                     rowClassName='font-row'
                     rowText='Total pomodoro:'
@@ -42,13 +43,13 @@ const StatisticsComponent = () => {
                     valueClassName='SnoozeSectionTittle__text'
                     valueText='0'
                 />
-            </IslandBodyContainer>
+            </IslandBody>
         )
     }
 
     const getPeriodList = () => {
         return (
-            <IslandBodyContainer showSpan={true}>
+            <IslandBody showSpan={true}>
                 <ul>
                     {statisticPeriods.map((statisticPeriod) => (
                         <li key={statisticPeriod} onClick={() => handleItemClick(statisticPeriod)}>
@@ -62,7 +63,7 @@ const StatisticsComponent = () => {
                         </li>
                     ))}
                 </ul>
-            </IslandBodyContainer>
+            </IslandBody>
         )
     }
 
@@ -80,7 +81,7 @@ const StatisticsComponent = () => {
                 className='font-title'
                 text={selectedItem}
                 showSpan={!isDropdownOpen}
-                onClick={toggleDropdown}
+                childComponent={<DropdownArrowComponent onClick={toggleDropdown}/>}
             />
             {body}
         </Island>

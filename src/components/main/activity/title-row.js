@@ -1,7 +1,7 @@
-import DropdownArrowComponent from './dropdown-arrow-component'
 import Text from '../../common/text'
 
-const TitleRow = ({ text, className, showSpan, onClick }) => {
+const TitleRow = (props) => {
+
     const outerDivStyle = {
         display: 'flex',
         flexFlow: 'column'
@@ -21,12 +21,12 @@ const TitleRow = ({ text, className, showSpan, onClick }) => {
     return (
         <div style={outerDivStyle}>
             <div style={innerDivStyle}>
-                <Text className={className} text={text} />
-                <DropdownArrowComponent onClick={onClick} />
+                <Text className={props.className} text={props.text}/>
+                {props.childComponent}
             </div>
-            {showSpan ? <span style={spanStyle}></span> : null}
+            {props.showSpan ? <span style={spanStyle}></span> : null}
         </div>
-    );
-};
+    )
+}
 
-export default TitleRow;
+export default TitleRow

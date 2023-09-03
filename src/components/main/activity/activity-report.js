@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import TitleRow from './title-row'
 import Island from '../../common/island'
-import IslandBodyContainer from '../../common/island-body-container'
+import IslandBody from '../../common/island-body'
 import IslandBodyRow from '../../common/island-body-row'
 import './activity-style.css'
 import getAllActivities from "../../../service/activity-service"
+import DropdownArrowComponent from "./dropdown-arrow-component";
 
-const ActivityComponent = () => {
+const ActivityReport = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [activities, setActivities] = useState([])
     const [selectedItem, setSelectedItem] = useState("")
@@ -34,7 +35,7 @@ const ActivityComponent = () => {
 
     const getActivities = () => {
         return (
-            <IslandBodyContainer showSpan={true}>
+            <IslandBody showSpan={true}>
                 <ul>
                     {activities.map((activity) => (
                         <li key={activity} onClick={() => handleItemClick(activity)}>
@@ -48,13 +49,13 @@ const ActivityComponent = () => {
                         </li>
                     ))}
                 </ul>
-            </IslandBodyContainer>
+            </IslandBody>
         )
     }
 
     const getReportRows = () => {
         return (
-            <IslandBodyContainer>
+            <IslandBody>
                 <IslandBodyRow
                     rowClassName='font-row'
                     rowText='Pomodoro closed today:'
@@ -73,7 +74,7 @@ const ActivityComponent = () => {
                     valueClassName='SnoozeSectionTittle__text'
                     valueText='0'
                 />
-            </IslandBodyContainer>
+            </IslandBody>
         )
     }
 
@@ -85,11 +86,11 @@ const ActivityComponent = () => {
                 className='font-title'
                 text={selectedItem}
                 showSpan={!isDropdownOpen}
-                onClick={toggleDropdown}
+                childComponent={<DropdownArrowComponent onClick={toggleDropdown}/>}
             />
             {body}
         </Island>
     )
 }
 
-export default ActivityComponent
+export default ActivityReport

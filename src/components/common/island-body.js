@@ -1,9 +1,8 @@
-function IslandBodyContainer({ children, showSpan }) {
+function IslandBody({ children, showSpan }) {
     const style = {
         display: 'flex',
         flexFlow: 'column',
         paddingTop: '10px',
-        'overflow-y': 'auto',
         'max-height': '150px'
     }
 
@@ -14,11 +13,11 @@ function IslandBodyContainer({ children, showSpan }) {
     }
 
     return (
-        <div style={style}>
+        <div style={style} id='IslandBody'>
             {children}
             {showSpan ? <span style={spanStyle}></span> : null}
         </div>
     )
 }
 
-export default IslandBodyContainer
+export default IslandBody

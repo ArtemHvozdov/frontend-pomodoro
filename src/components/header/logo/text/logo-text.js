@@ -1,10 +1,10 @@
 import Text from "../../../common/text";
-import "./logo-text-section.css"
+import "./logo-text.css"
 
-function LogoTextSection(props) {
+function LogoText(props) {
     return (
         <Text className="logo__text" text={props.text} />
     )
 }
 
-export default LogoTextSection;
+export default LogoText;

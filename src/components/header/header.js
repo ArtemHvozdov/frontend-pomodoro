@@ -1,4 +1,4 @@
-import LogoSection from "./logo/logo-section";
+import Logo from "./logo/logo";
 import Toggle from "./toggle/toggle";
 import "./header.css"
 
@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <header>
             <div className="header__container">
-                <LogoSection />
+                <Logo />
                 <Toggle onClick={props.handleShowMenu} />
             </div>
         </header>
